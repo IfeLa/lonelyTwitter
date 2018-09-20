@@ -36,26 +36,14 @@ public class LonelyTwitterActivity extends Activity {
 		oldTweetsList = (ListView) findViewById(R.id.oldTweetsList);
 
 		saveButton.setOnClickListener(new View.OnClickListener() {
-//
-//			public void onClick(View v) {
+
+			public void onClick(View v) {
 //				setResult(RESULT_OK);
-//				String text = bodyText.getText().toString();
-//				saveInFile(text, new Date(System.currentTimeMillis()));
-//				finish();
-//			}
-            public void onClick(View v){
+				String text = bodyText.getText().toString();
+				saveInFile(text, new Date(System.currentTimeMillis()));
+				finish();
+			}
 
-                setResult(RESULT_OK);
-
-
-                String text = bodyText.getText().toString();
-                saveInFile(text, new Date(System.currentTimeMillis()));
-
-
-                Cat cat = new Cat();
-                cat.setType("it's a cat");
-
-            }
 		});
 	}
 
